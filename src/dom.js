@@ -45,24 +45,56 @@ const mainPage = () => {
   maxTemp.setAttribute('class', 'max-temp')
   contentDiv.appendChild(maxTemp)
 
-  searchSubmit.addEventListener('click', function(){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+searchInput.value+'&appid=b4798b30d3b96afc9bb209e0110b6378')
-        .then(response => response.json())
-        .then(data => {
-          const nameValue = data['name']
-          const tempValue = data['main']['temp']
-          const descValue = data['weather'][0]['description']
-          const minTempValue = data['main']['temp_min']
-          const maxTempValue = data['main']['temp_max']
 
-          cityName.innerHTML = nameValue
-          cityDesc.innerHTML = 'Desc:' + ' ' + descValue
-          cityTemp.innerHTML = 'Temp:' + ' ' + tempValue
-          minTemp.innerHTML = 'Min-Temp:' + ' ' + minTempValue
-          maxTemp.innerHTML = 'Max-Temp:' + ' ' + maxTempValue
-        })
 
-  })
+  const toggleTemp = document.createElement('button')
+  toggleTemp.setAttribute('class', 'btn btn-warning toggle-temp')
+  contentDiv.appendChild(toggleTemp)
+
+  toggleTemp.innerHTML = 'Toggle Temperature'
+
+  const weatherApi = 'https://api.openweathermap.org/data/2.5/weather?q=' + searchInput.value + '&appid=b4798b30d3b96afc9bb209e0110b6378&units=imperial'
+
+  fetch('weatherApi', {mode: 'cors'})
+    .then(response => response.json())
+    .then((data) => responseData = data)
+
+    console.log(responseData)
+
+
+
+  // const getWeather = async () => {
+  //
+  //
+  //
+  //       const nameValue = data['name']
+  //       const tempValue = data['main']['temp']
+  //       const descValue = data['weather'][0]['description']
+  //       const minTempValue = data['main']['temp_min']
+  //       const maxTempValue = data['main']['temp_max']
+  //
+  //       // test(tempValue)
+  //
+  //       cityName.innerHTML = nameValue
+  //       cityDesc.innerHTML = 'Desc:' + ' ' + descValue
+  //       cityTemp.innerHTML = 'Temp:' + ' ' + tempValue
+  //       minTemp.innerHTML = 'Min-Temp:' + ' ' + minTempValue
+  //       maxTemp.innerHTML = 'Max-Temp:' + ' ' + maxTempValue
+  //     })
+  //
+  //     const test = () => {
+  //
+  //       let tempInCelsious = (value - 32) * 5 / 9
+  //       let tempInFareinheit = (tempInCelsious * 9/5) + 32
+  //
+  // }
+
+  searchSubmit.addEventListener('click', getWeather)
+
+
+  //   }
+
+    // toggleTemp.addEventListener('click', )
 
   return mainSection
 }
