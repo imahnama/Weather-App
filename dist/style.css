@@ -24,7 +24,7 @@ body {
   border-radius: 5px;
 }
 
-.main-content {
+#main-content {
   width: 28%;
   padding: 2em 0em 2em 5em;
   align-items: center;
@@ -50,6 +50,10 @@ body {
 }
 
 .image {
-  width: auto;
-  height: auto
+  width: 100px;
+  height: 100px;
+}
+
+.hide-menu {
+  display: none;
 }
