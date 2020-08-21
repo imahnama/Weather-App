@@ -1,9 +1,5 @@
 import mainPage from './dom';
-import getWeatherData from './weather';
 
-const displayPages = () => {
-  return mainPage();
-  getWeatherData();
-};
+const displayPages = () => mainPage();
 
 document.querySelector('.content').appendChild(displayPages());
