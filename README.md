@@ -1,6 +1,6 @@
-# Restaurant App
+# Weather App
 
-Practicing DOM manipulation by dynamically rendering a simple restaurant homepage!
+A weather forecast site using the weather API
 
 ## Built With
 
@@ -14,7 +14,7 @@ Practicing DOM manipulation by dynamically rendering a simple restaurant homepag
 
 [live link]()
 
-![Page UI](images/1.png)
+![Page UI](dist/images/1.png)
 
 ### Prerequisites
 
