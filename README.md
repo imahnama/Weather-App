@@ -12,7 +12,7 @@ A weather forecast site using the weather API
 
 ## Live demo Link
 
-[live link]()
+[live link](https://rawcdn.githack.com/imahnama/Weather-App/7a26f1bf28a60001378754cc4d1c24b499b96d76/dist/index.html)
 
 ![Page UI](dist/images/1.png)
 
