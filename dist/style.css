@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#main-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#input {
+  display: flex;
+  padding: 75px;
+  justify-content: center;
+ background-image: url(./images/cloudGif.gif);
+ background-repeat: no-repeat;
+ background-size: cover;
+ margin-top: 0px;
+}
+
+.inputValue {
+  width: 50%;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+#main-content {
+  width: 28%;
+  padding: 2em 0em 2em 5em;
+  align-items: center;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #1a6b91;
+  color: white;
+  font-size: 20px;
+}
+
+.city-temp, .max-temp, .min-temp {
+  color: #DCDCDC;
+}
+
+.toggle-temp {
+  margin-top: 2em;
+}
+
+.city-search {
+  background-color: #efaa43;
+  width:40px;
+  color: white;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+}
+
+.hide-menu {
+  display: none;
+}
